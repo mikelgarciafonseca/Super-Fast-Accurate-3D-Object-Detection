@@ -129,6 +129,6 @@ if __name__ == '__main__':
 
     print("Started Node")
     rospy.init_node('SuperFastObjectDetection', anonymous=True)
-    pub = rospy.Publisher('detected_objects', DetectedObjectArray, queue_size=10)
+    pub = rospy.Publisher('objects', DetectedObjectArray, queue_size=10)
     rospy.Subscriber("points_raw", PointCloud2, on_scan)
     rospy.spin()
